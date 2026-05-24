@@ -2,7 +2,7 @@
 
 A stunning, fully responsive portfolio website built with React, featuring futuristic animations, glassmorphism effects, and Telegram bot integration for contact forms.
 
-![Portfolio Preview](https://www.bytevanta.in/)
+## live link : (https://www.bytevanta.in/)
 
 ## ✨ Features
 
