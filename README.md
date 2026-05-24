@@ -271,10 +271,10 @@ This project is open source and available under the MIT License.
 
 If you have any questions or suggestions, feel free to reach out:
 
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourusername)
-- GitHub: [Your GitHub](https://github.com/yourusername)
+- Email:hariom.info07@gmail.com
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/mrhari009/)
+- GitHub: [Your GitHub](https://github.com/codebyharii)
 
 ---
 
-Made with ❤️ using React and Tailwind CSS
+
