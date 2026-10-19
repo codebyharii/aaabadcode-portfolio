@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowUpRight, Plus } from 'lucide-react'
+import { Plus } from 'lucide-react'
 
 const skillCategories = [
   {
@@ -45,10 +45,6 @@ const Skills = () => {
               <span className="kicker-dot"></span>
               My Skills
             </div>
-            <a href="#contact" className="btn-gold">
-              Start a Project Now
-              <ArrowUpRight size={18} />
-            </a>
           </div>
             <p className="max-w-2xl mx-0 text-text-primary text-xl md:text-[1.9rem] font-semibold leading-tight tracking-tight">
               Exploring the Technologies Behind My Full-Stack and AI-Powered Projects
