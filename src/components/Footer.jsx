@@ -1,4 +1,5 @@
 import { ArrowUpRight, Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import { SiLeetcode } from 'react-icons/si'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -10,9 +11,9 @@ const Footer = () => {
           <div>
             <div className="kicker mb-4">
               <span className="kicker-dot"></span>
-              Got a project?
+              Open to opportunities
             </div>
-            <h2 className="headline-lg max-w-3xl">Surround yourself with an expert</h2>
+            <h2 className="headline-lg max-w-3xl">Let's build something great together</h2>
           </div>
 
           <div className="lg:justify-self-end">
@@ -25,15 +26,17 @@ const Footer = () => {
 
         <div className="site-divider mt-12 pt-8 flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
           <div>
-            <p className="font-heading font-semibold text-2xl text-text-heading">aaabadcode</p>
+            <p className="font-heading font-semibold text-2xl text-text-heading">Hari Om</p>
             <p className="body-muted text-sm mt-2">©{currentYear} Hari Om Singh. All rights reserved.</p>
           </div>
 
           <nav className="flex flex-wrap gap-6 text-sm uppercase tracking-[0.08em]">
             <a href="#home" className="hover:text-primary-400 transition-colors">Home</a>
             <a href="#about" className="hover:text-primary-400 transition-colors">About Me</a>
-            <a href="#skills" className="hover:text-primary-400 transition-colors">Services</a>
+            <a href="#experience" className="hover:text-primary-400 transition-colors">Experience</a>
             <a href="#projects" className="hover:text-primary-400 transition-colors">Projects</a>
+            <a href="#skills" className="hover:text-primary-400 transition-colors">Skills</a>
+            <a href="#education" className="hover:text-primary-400 transition-colors">Education</a>
             <a href="#contact" className="hover:text-primary-400 transition-colors">Contact</a>
           </nav>
 
@@ -64,6 +67,15 @@ const Footer = () => {
               aria-label="Twitter"
             >
               <Twitter size={16} />
+            </a>
+            <a
+              href="https://leetcode.com/u/codebyhari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="h-10 w-10 rounded-full border border-border-subtle text-text-muted hover:text-primary-400 hover:border-primary-600 transition-colors inline-flex items-center justify-center"
+              aria-label="LeetCode"
+            >
+              <SiLeetcode size={16} />
             </a>
             <a
               href="mailto:hariom.info07@gmail.com"

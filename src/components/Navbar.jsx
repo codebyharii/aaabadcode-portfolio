@@ -9,8 +9,10 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -62,10 +64,10 @@ const Navbar = () => {
             <span className="h-8 w-8 rounded-full bg-primary-400 text-black font-heading font-bold flex items-center justify-center text-sm">
               H
             </span>
-            <span className="font-heading font-semibold text-2xl text-text-heading">aaabadcode</span>
+            <span className="font-heading font-semibold text-2xl text-text-heading">Hari Om</span>
           </a>
 
-          <ul className="hidden md:flex items-center gap-8 text-sm uppercase tracking-[0.12em]">
+          <ul className="hidden md:flex items-center gap-5 lg:gap-8 text-sm uppercase tracking-[0.12em]">
             {navItems.map((item) => (
               <li key={item.name}>
                 <a
