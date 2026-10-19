@@ -4,24 +4,24 @@ import { toast } from 'react-toastify'
 
 const faqs = [
   {
-    question: 'What services do you offer?',
+    question: 'What do you work on?',
     answer:
-      'I design and build responsive websites, secure backend APIs, and full stack products with scalable architecture.',
+      'Full stack products end to end: Next.js and React interfaces, Node.js and Spring Boot APIs, database design, authentication, and deployments. Recently I have also been building LLM-powered features like chatbots and RAG.',
   },
   {
-    question: 'How fast will I receive my work?',
+    question: 'Are you open to new opportunities?',
     answer:
-      'Small projects are usually delivered in 3-7 days, while larger full stack builds are delivered in milestones with clear timelines.',
+      'Yes. I am currently a Full Stack Developer at Macgence and open to internships, freelance projects, and remote roles. Send a message with the details.',
   },
   {
-    question: 'Can you work on a single project module?',
+    question: 'Can you take a single module or feature?',
     answer:
-      'Yes. I can handle individual modules like authentication, dashboard UI, backend API integration, or deployment setup.',
+      'Yes. I can own individual pieces like authentication, an admin dashboard, API integration, an AI chatbot, or deployment setup.',
   },
   {
-    question: 'Do you provide ongoing support?',
+    question: 'How quickly do you reply?',
     answer:
-      'Yes, I provide ongoing support for maintenance, bug fixes, feature updates, and performance improvements after delivery.',
+      'Usually within a day. For anything urgent, reach me on LinkedIn or by email at hariom.info07@gmail.com.',
   },
 ]
 
@@ -158,42 +158,49 @@ const Contact = () => {
         </div>
 
         <div className="space-y-3">
-          {faqs.map((faq, index) => (
-            <article
-              key={faq.question}
-              className={`panel p-5 md:p-6 ${openFaqIndex === index ? 'bg-[#19160c]' : ''}`}
-            >
-              <div className="flex items-start justify-between gap-4">
-                <div>
+          {faqs.map((faq, index) => {
+            const isOpen = openFaqIndex === index
+            return (
+              <article
+                key={faq.question}
+                className={`panel transition-colors duration-300 ${isOpen ? 'bg-[#19160c]' : ''}`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpenFaqIndex((prev) => (prev === index ? -1 : index))}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${index}`}
+                  className="w-full flex items-center justify-between gap-4 p-4 md:p-6 text-left"
+                >
                   <h3
-                    className={`text-xl font-heading font-semibold ${
-                      openFaqIndex === index ? 'text-primary-400' : 'text-text-heading'
+                    className={`text-base sm:text-lg md:text-xl font-heading font-semibold transition-colors ${
+                      isOpen ? 'text-primary-400' : 'text-text-heading'
                     }`}
                   >
                     {faq.question}
                   </h3>
-                  <div
-                    className={`grid transition-all duration-300 ease-out ${
-                      openFaqIndex === index ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0 mt-0'
-                    }`}
-                  >
-                    <p className="body-muted max-w-2xl overflow-hidden">{faq.answer}</p>
+                  <span className="h-9 w-9 shrink-0 rounded-full border border-border-subtle inline-flex items-center justify-center text-text-muted">
+                    <Plus
+                      size={16}
+                      className={`transition-transform duration-300 ${isOpen ? 'rotate-45 text-primary-400' : ''}`}
+                    />
+                  </span>
+                </button>
+                <div
+                  id={`faq-panel-${index}`}
+                  className={`grid transition-all duration-300 ease-out ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="body-muted max-w-2xl px-4 pb-4 md:px-6 md:pb-6 text-sm md:text-base">
+                      {faq.answer}
+                    </p>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setOpenFaqIndex((prev) => (prev === index ? -1 : index))}
-                  aria-label={`Toggle answer for ${faq.question}`}
-                  className="h-7 w-7 rounded-full border border-border-subtle inline-flex items-center justify-center text-text-muted hover:text-primary-400 hover:border-primary-600 transition-colors"
-                >
-                  <Plus
-                    size={14}
-                    className={`transition-transform duration-300 ${openFaqIndex === index ? 'rotate-45' : ''}`}
-                  />
-                </button>
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>
