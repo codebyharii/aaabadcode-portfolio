@@ -4,34 +4,16 @@ const projects = [
   {
     title: 'E-Commerce Platform',
     description:
-      'Full-stack commerce solution with secure authentication, product management, and scalable Spring Boot APIs.',
+      'Transaction-processing backend built with Spring Boot (REST APIs, MVC) and a React.js frontend, covering order lifecycle, cart state, product CRUD, and user authentication on a MySQL schema managed with Maven.',
     link: 'https://github.com/codebyharii/ecommerce-webise-using-spring-boot',
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1200&q=80',
     imagePosition: 'center 35%',
     accent: false,
   },
   {
-    title: 'AI-Powered Crop Yield Prediction System',
-    description:
-      'An AI-powered crop yield prediction system that analyzes agricultural data to estimate yield and support smarter farming decisions.',
-    link: 'https://github.com/codebyharii/Ai-powered',
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
-    imagePosition: 'center 40%',
-    accent: false,
-  },
-  {
-    title: 'Smart Contact Manager',
-    description:
-      'Secure contact manager with login protection, CRUD workflows, and production-focused backend structure.',
-    link: 'https://github.com/codebyharii/Smart-contact-manager',
-    image: 'https://images.unsplash.com/photo-1556741533-974f8e62a92d?auto=format&fit=crop&w=1200&q=80',
-    imagePosition: 'center 45%',
-    accent: false,
-  },
-  {
     title: 'Lung Cancer Detection using ML',
     description:
-      'Machine learning workflow using Logistic Regression, Random Forest, and CNN for early risk prediction.',
+      'Early lung cancer detection model using Logistic Regression, Random Forest, and CNN on medical imaging and patient data, built with Python, FastAPI, Pandas, NumPy, Scikit-learn, and TensorFlow.',
     link: 'https://github.com/codebyharii/lung-cancer-detection',
     image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80',
     imagePosition: 'center 30%',

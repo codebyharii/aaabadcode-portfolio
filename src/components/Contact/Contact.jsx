@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Loader2, Plus, Send } from 'lucide-react'
-import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 
 const faqs = [
@@ -27,14 +26,10 @@ const faqs = [
 ]
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [formData, setFormData] = useState({ name: '', email: '', message: '', website: '' })
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [openFaqIndex, setOpenFaqIndex] = useState(0)
-
-  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_zmpt20m'
-  const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
   const validateForm = () => {
     const newErrors = {}
@@ -63,27 +58,16 @@ const Contact = () => {
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: '' }))
   }
 
-  const sendWithEmailJS = async (data) => {
-    if (!EMAILJS_SERVICE_ID || !EMAILJS_PUBLIC_KEY) {
-      throw new Error('EmailJS configuration is missing')
+  const sendMessage = async (data) => {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}))
+      throw new Error(body.error || 'Request failed')
     }
-
-    const templateParams = {
-      name: data.name,
-      email: data.email,
-      message: data.message,
-      from_name: data.name,
-      from_email: data.email,
-      reply_to: data.email,
-      to_name: 'Hari Om Singh',
-    }
-
-    return emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
-      templateParams,
-      EMAILJS_PUBLIC_KEY
-    )
   }
 
   const handleSubmit = async (e) => {
@@ -96,18 +80,12 @@ const Contact = () => {
     setIsSubmitting(true)
 
     try {
-      await sendWithEmailJS(formData)
+      await sendMessage(formData)
       toast.success('Message sent successfully.')
-      setFormData({ name: '', email: '', message: '' })
+      setFormData({ name: '', email: '', message: '', website: '' })
     } catch (error) {
-      if (error?.message === 'EmailJS configuration is missing') {
-        toast.error('EmailJS is not configured. Add your service ID and public key.')
-      } else {
-        const detail = error?.text || error?.message || 'Unknown EmailJS error'
-        toast.error(`Failed to send message: ${detail}`)
-        console.error('EmailJS send failed', error)
-      }
-    } finally {
+      toast.error(error?.message || 'Failed to send message. Please try again.')
+        } finally {
       setIsSubmitting(false)
     }
   }
@@ -127,9 +105,22 @@ const Contact = () => {
           </p>
 
           <form onSubmit={handleSubmit} className="panel mt-8 p-6 space-y-4">
+            {/* Honeypot field: hidden from users, filled only by bots */}
+            <input
+              type="text"
+              name="website"
+              value={formData.website}
+              onChange={handleChange}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
+
             <input
               type="text"
               name="name"
+              maxLength={100}
               value={formData.name}
               onChange={handleChange}
               placeholder="Your name"
@@ -140,6 +131,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              maxLength={254}
               value={formData.email}
               onChange={handleChange}
               placeholder="Your email"
@@ -149,6 +141,7 @@ const Contact = () => {
 
             <textarea
               name="message"
+              maxLength={2000}
               rows={5}
               value={formData.message}
               onChange={handleChange}

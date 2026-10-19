@@ -1,24 +1,24 @@
 const experiences = [
   {
-    title: 'Backend and Machine Learning Developer',
-    company: 'Academic and Personal Projects',
-    period: '2024 - Present',
-    description:
-      'Developed full stack applications using Spring Boot and React, designed scalable REST APIs, and built AI-assisted solutions for practical workflows.',
+    title: 'Full Stack Developer',
+    company: 'Macgence (Remote)',
+    period: 'Aug 2026 - Present',
+    points: [
+      'Engineered an AI-powered chatbot for the Macgence Data Marketplace using LLM APIs, helping users discover datasets, compare pricing options, and get instant answers.',
+      'Built full-stack features using Next.js, TypeScript, Node.js, Prisma, and REST APIs, covering dataset listings, pricing options, and sample uploads.',
+      'Implemented secure authentication and an admin role system, including a 6-digit OTP password reset, email verification, and invitation-based admin onboarding with Resend email integration.',
+      'Wrote automated tests for authentication flows and fixed edge cases, such as not blocking unverified emails, to improve reliability in production.',
+    ],
   },
   {
-    title: 'Spring Boot Backend Developer (Trainee)',
-    company: 'Self Learning and Project Development',
-    period: '2025 - Present',
-    description:
-      'Implemented secure authentication with Spring Security and JWT, documented APIs, and focused on production-style backend architecture.',
-  },
-  {
-    title: 'Software Development Learner',
-    company: 'DSA, Full Stack, and AI',
-    period: '2023 - Present',
-    description:
-      'Solved DSA problems consistently, built frontend and backend projects, and explored machine learning with real implementation outcomes.',
+    title: 'Full Stack Developer Intern',
+    company: 'Brain Aura Innovations (Remote)',
+    period: 'Jun 2026 - Aug 2026',
+    points: [
+      'Built and shipped full-stack features end-to-end using React.js, Next.js, Node.js, and REST APIs for production client-facing platforms.',
+      'Collaborated with marketing and product stakeholders to turn requirements into responsive UI components and backend integrations.',
+      'Owned database design, API development, and production deployments (Vercel) for internal tools.',
+    ],
   },
 ]
 
@@ -34,7 +34,7 @@ const Experience = () => {
 
           <div className="space-y-4">
             {experiences.map((exp) => (
-              <article key={exp.title} className="panel p-6 md:p-8">
+              <article key={exp.title + exp.company} className="panel p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                   <div>
                     <h3 className="headline-md text-[1.9rem] leading-[1.15]">{exp.title}</h3>
@@ -44,7 +44,11 @@ const Experience = () => {
                     {exp.period}
                   </span>
                 </div>
-                <p className="body-muted max-w-3xl">{exp.description}</p>
+                <ul className="body-muted max-w-3xl space-y-2 list-disc pl-5">
+                  {exp.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
@@ -59,16 +63,22 @@ const Experience = () => {
           <div className="panel p-6">
             <p className="flex justify-between gap-4 py-3 border-b border-border-subtle">
               <span className="body-muted">Phone</span>
-              <span>+91 9473562113</span>
+              <span>+91 947-356-2113</span>
             </p>
             <p className="flex justify-between gap-4 py-3 border-b border-border-subtle">
               <span className="body-muted">Email</span>
               <span>hariom.info07@gmail.com</span>
             </p>
             <p className="flex justify-between gap-4 py-3 border-b border-border-subtle">
-              <span className="body-muted">Website</span>
+              <span className="body-muted">GitHub</span>
               <a href="https://github.com/codebyharii" target="_blank" rel="noreferrer" className="text-gold-500 hover:text-gold-400 transition-colors">
                 github.com/codebyharii
+              </a>
+            </p>
+            <p className="flex justify-between gap-4 py-3 border-b border-border-subtle">
+              <span className="body-muted">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/mrhari009/" target="_blank" rel="noreferrer" className="text-gold-500 hover:text-gold-400 transition-colors">
+                linkedin.com/in/mrhari009
               </a>
             </p>
             <p className="flex justify-between gap-4 pt-3">

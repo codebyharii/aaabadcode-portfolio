@@ -3,28 +3,32 @@ import { ArrowUpRight, Plus } from 'lucide-react'
 
 const skillCategories = [
   {
+    title: 'Languages',
+    technologies: ['Java', 'Python', 'JavaScript', 'TypeScript', 'C', 'C++', 'SQL'],
+  },
+  {
     title: 'Frontend',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vue.js', 'Redux'],
+    technologies: ['React.js', 'Next.js', 'Tailwind CSS'],
   },
   {
     title: 'Backend',
-    technologies: ['Spring Boot', 'Python', 'Express', 'FastAPI', 'Java', 'Node.js'],
+    technologies: ['Spring Boot', 'Express.js', 'Node.js', 'Prisma', 'RESTful API Design', 'Maven'],
   },
   {
     title: 'Database',
-    technologies: ['PostgreSQL', 'MongoDB', 'Redis', 'MySQL'],
+    technologies: ['PostgreSQL', 'MySQL', 'MongoDB'],
   },
   {
-    title: 'Cloud & DevOps',
-    technologies: ['AWS', 'Docker', 'CI/CD', 'ORACLE', 'Cloudflare'],
+    title: 'DevOps & Infrastructure',
+    technologies: ['Docker', 'GitHub Actions', 'Load Balancing', 'Cloudflare'],
   },
   {
-    title: 'AI & ML',
-    technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'NLP'],
+    title: 'AI-Assisted Development',
+    technologies: ['Claude CLI', 'Claude API', 'Google Gemini API', 'Hugging Face', 'Prompt Engineering', 'RAG'],
   },
   {
-    title: 'Tools & Others',
-    technologies: ['Git', 'Jira', 'IntelliJ IDEA', 'Postman', 'VS Code', 'Linux'],
+    title: 'Tools & Platforms',
+    technologies: ['Git', 'GitHub', 'Postman', 'Linux', 'IntelliJ IDEA', 'Vercel'],
   },
 ]
 

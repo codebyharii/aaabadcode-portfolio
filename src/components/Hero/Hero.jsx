@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowUpRight, Download, Github, Linkedin, Twitter } from 'lucide-react'
+import { SiLeetcode } from 'react-icons/si'
 import profile from '../assests/dp.png'
 
 const Hero = () => {
@@ -12,6 +13,7 @@ const Hero = () => {
       { icon: Github, href: 'https://github.com/codebyharii', label: 'GitHub' },
       { icon: Linkedin, href: 'https://www.linkedin.com/in/mrhari009/', label: 'LinkedIn' },
       { icon: Twitter, href: 'https://x.com/HariomS41254755', label: 'Twitter' },
+      { icon: SiLeetcode, href: 'https://leetcode.com/u/codebyhari/', label: 'LeetCode' },
     ],
     []
   )
@@ -25,10 +27,10 @@ const Hero = () => {
             <span className="block lg:inline lg:ml-8">Singh</span>
           </h1>
           <div className="mt-7 max-w-[420px] mx-auto lg:mx-0 px-2 sm:px-0 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 sm:gap-x-8 gap-y-3">
-            <span className="hash-tag">#BACKEND</span>
-            <span className="hash-tag">#SPRING BOOT</span>
             <span className="hash-tag">#FULL STACK</span>
-            <span className="hash-tag">#WEB DESIGN</span>
+            <span className="hash-tag">#NEXT.JS</span>
+            <span className="hash-tag">#AI</span>
+            <span className="hash-tag">#SPRING BOOT</span>
           </div>
         </div>
 
@@ -50,8 +52,8 @@ const Hero = () => {
 
           <div className="space-y-7 pb-3">
             <p className="text-base md:text-[1.25rem] leading-[1.7] max-w-2xl text-text-body">
-              Welcome to my portfolio. I am Hari Om Singh, a full stack developer focused on
-              building elegant and functional products with strong backend architecture.
+              Welcome to my portfolio. I am Hari Om Singh, a Full Stack Developer at Macgence
+              building AI-powered products with Next.js, TypeScript, Node.js, and LLM APIs.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -60,7 +62,7 @@ const Hero = () => {
                 <ArrowUpRight size={18} />
               </a>
               <a
-                href="https://drive.google.com/file/d/1Xkn8DMnm4ZCHVtjE7x5cCscCW2ziy6I4/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1GrRdS9h8u0fKVgisjQ1zDWuIfjaFkAMC/view?usp=drive_link"
                 className="btn-outline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -93,13 +95,13 @@ const Hero = () => {
 
       <div className="ticker-strip mt-16 md:mt-20 overflow-hidden">
         <div className="ticker-row">
-          <span>"Navigating the portfolio feels natural and easy to use."</span>
-          <span>"Delivered polished interface with premium developer vibe."</span>
-          <span>"Smooth interactions and clear call to action flow."</span>
-          <span>"Strong black and gold identity with excellent readability."</span>
-          <span>"Navigating the portfolio feels natural and easy to use."</span>
-          <span>"Delivered polished interface with premium developer vibe."</span>
-          <span>"Smooth interactions and clear call to action flow."</span>
+          <span>Full Stack Developer at Macgence</span>
+          <span>Next.js · TypeScript · Node.js · Prisma</span>
+          <span>LLM-powered chatbots and RAG</span>
+          <span>Spring Boot · React · MySQL</span>
+          <span>Full Stack Developer at Macgence</span>
+          <span>Next.js · TypeScript · Node.js · Prisma</span>
+          <span>LLM-powered chatbots and RAG</span>
         </div>
       </div>
     </section>

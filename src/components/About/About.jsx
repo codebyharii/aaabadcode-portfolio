@@ -11,16 +11,17 @@ const About = () => {
             About Me
           </div>
 
-          <h2 className="headline-lg max-w-3xl">Passionate Full Stack and Backend Engineer</h2>
+          <h2 className="headline-lg max-w-3xl">Full Stack Developer building AI-powered products</h2>
 
           <p className="mt-6 max-w-3xl text-lg body-muted">
-            I am Hari Om Singh, a developer passionate about building intuitive and scalable
-            digital products. I have worked on Spring Boot APIs, full stack dashboards, and
-            machine-learning-driven products that solve practical problems.
+            I am Hari Om Singh, a Computer Science student at KIET and a Full Stack Developer at
+            Macgence, where I build the Data Marketplace with Next.js, TypeScript, Node.js, and
+            Prisma, including an LLM-powered chatbot and a secure auth and admin system. Earlier I
+            shipped production features as a Full Stack Developer Intern at Brain Aura Innovations.
           </p>
 
           <a
-            href="https://drive.google.com/file/d/1Xkn8DMnm4ZCHVtjE7x5cCscCW2ziy6I4/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1GrRdS9h8u0fKVgisjQ1zDWuIfjaFkAMC/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold mt-8"
@@ -34,7 +35,7 @@ const About = () => {
           <img src={profile} alt="Hari Om Singh" className="w-full h-[360px] object-cover object-top" />
           <div className="p-6 border-t border-border-subtle">
             <h3 className="headline-md text-xl">Hari Om Singh</h3>
-            <p className="body-muted mt-1">Full Stack Developer and Backend Engineer</p>
+            <p className="body-muted mt-1">Full Stack Developer at Macgence</p>
             <div className="site-divider mt-5 pt-5 space-y-3 text-sm">
               <p className="flex justify-between gap-4">
                 <span className="body-muted">Base</span>
@@ -42,11 +43,11 @@ const About = () => {
               </p>
               <p className="flex justify-between gap-4">
                 <span className="body-muted">Experience</span>
-                <span>3+ Years Learning and Building</span>
+                <span>Macgence (Aug 2026 - Present)</span>
               </p>
               <p className="flex justify-between gap-4">
                 <span className="body-muted">Focus</span>
-                <span>Spring Boot, MERN, React, ML</span>
+                <span>Next.js, TypeScript, Node.js, LLM APIs</span>
               </p>
             </div>
           </div>
